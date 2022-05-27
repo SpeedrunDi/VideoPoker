@@ -2,3 +2,13 @@
   max-width: 1200px;
   margin: 0 auto;
 }
+
+.btn-block {
+  max-width: max-content;
+  margin: 0 auto 50px;
+}
+
+.cards-block {
+  max-width: max-content;
+  margin: 0 auto;
+}

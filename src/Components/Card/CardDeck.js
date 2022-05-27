@@ -20,7 +20,8 @@ class CardDeck extends Component {
 
   getCard = () => {
     const indexCard = Math.floor(Math.random() * this.arrayCards.length);
-    return  this.arrayCards.splice(indexCard, 1);
+    const card = this.arrayCards.splice(indexCard, 1);
+    return card[0];
   }
 
   getCards = (howMany) => {
