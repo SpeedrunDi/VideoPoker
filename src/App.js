@@ -2,6 +2,7 @@ import {Component} from "react";
 import './App.css';
 import Card from './Components/Card/Card';
 import CardDeck from './Components/Card/CardDeck';
+import PokerHand from './Components/Card/PokerHand';
 
 
 class App extends Component {
@@ -14,6 +15,9 @@ class App extends Component {
     const cards = cardDeck.getCards(5);
 
     this.setState({ cards });
+
+    const pokerHand = new PokerHand(cards);
+    console.log(pokerHand.getOutcome());
   }
 
   render() {
