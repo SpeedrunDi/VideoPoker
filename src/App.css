@@ -1,11 +1,44 @@
 .poker-block {
   max-width: 1200px;
+  min-height: 400px;
+  margin: 40px auto 0;
+  padding: 20px 15px 0;
+  background: #009900;
+  border-radius: 20px;
+}
+
+.poker-hand {
+  max-width: max-content;
   margin: 0 auto;
+  padding: 20px;
+  font-size: 30px;
+  border-radius: 20px;
+  border: 2px solid #4830F0;
+  background: #9EEFE1;
 }
 
 .btn-block {
+  display: block;
   max-width: max-content;
-  margin: 0 auto 50px;
+  margin: 30px auto 50px;
+}
+
+.btn {
+  cursor: pointer;
+  display: inline-block;
+  color: white;
+  padding: 20px 30px;
+  margin: 10px 20px;
+  border-radius: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background-image: linear-gradient(to right, #9EEFE1 0%, #4830F0 51%, #9EEFE1 100%);
+  background-size: 200% auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, .1);
+  transition: .5s;
+}
+.btn:hover {
+  background-position: right center;
 }
 
 .cards-block {

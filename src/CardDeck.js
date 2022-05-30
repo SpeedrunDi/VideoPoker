@@ -1,5 +1,5 @@
 import {Component} from "react";
-import './cards.css';
+import './Components/Card/cards.css';
 
 class CardDeck extends Component {
   data = {

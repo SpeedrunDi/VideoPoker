@@ -1,13 +1,14 @@
 import {Component} from "react";
 import './App.css';
 import Card from './Components/Card/Card';
-import CardDeck from './Components/Card/CardDeck';
-import PokerHand from './Components/Card/PokerHand';
+import CardDeck from './CardDeck';
+import PokerHand from './PokerHand';
 
 
 class App extends Component {
   state = {
     cards: [],
+    pokerHand: 'Poker hand',
   }
 
   getCards = () => {
@@ -17,7 +18,9 @@ class App extends Component {
     this.setState({ cards });
 
     const pokerHand = new PokerHand(cards);
-    console.log(pokerHand.getOutcome());
+    const response = pokerHand.getOutcome();
+
+    this.setState( {pokerHand: response});
   }
 
   render() {
@@ -29,6 +32,9 @@ class App extends Component {
 
     return (
       <div className="playingCards poker-block">
+        <div className="poker-hand">
+          <span>{this.state.pokerHand}</span>
+        </div>
         <div className="btn-block">
           <button onClick={this.getCards} type="button" className="btn">Раздать карты</button>
         </div>
